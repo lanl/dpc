@@ -1,0 +1,10 @@
+Package: dpc
+Type: Package
+Title: Deep Process Convolutions (Bayesian)
+Version: 1.0
+Date: 2025-05-25
+Authors: Kelly R. Moran and Richard D. Payne
+Maintainer: Kelly R. Moran, <krmoran@lanl.gov>
+Description: This package implements a general version of the model described in Moran, Kelly R, et al. "Bayesian `Deep' Process Convolutions: An Application in Cosmology" (2024) https://arxiv.org/html/2411.14747v1. This model utilizes two-layers of process convolutions to model mean functions whose smoothness varies over the domain.
+License: GPL-3
+Imports: RcppGSL

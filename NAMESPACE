@@ -1,0 +1,6 @@
+exportPattern("^[[:alpha:]]+")
+useDynLib(dpc)
+import(RcppGSL)
+importFrom("graphics", "lines", "plot")
+importFrom("stats", "dnorm", "quantile")
+importFrom("utils", "read.csv", "write.table")
