@@ -59,7 +59,7 @@ sig <- function(x, c=0.5) c * rnorm(length(x), 0, sqrt(x))
 y = vars = list()
 y[[1]] = vars[[1]] = list()
 set.seed(123)
-nrep = 10; n = 100
+nrep = 5; n = 20
 for(jj in 1:nrep){
   x <- runif(n, 0.1, 1)
   sigx <- sig(x)
@@ -96,7 +96,7 @@ library(dpc)
 set.seed(424)
 
 # Create data from 3 functions with different smoothness and noise
-n <- 75
+n <- 100
 f1 <- function(x) sin(x)
 f2 <- function(x) cos(x)
 f3 <- function(x) 1 + sin(x)
@@ -116,7 +116,7 @@ for(i in 1:3){
 }
 
 # Fit model
-out <- dpc(Y, vars, nmcmc = 1000, burn = 1000, n_u = 15, n_v = 5, seed = 1, num_threads = 1, draw_u = TRUE)
+out <- dpc(Y, vars, nmcmc = 5000, burn = 2500, n_u = 15, n_v = 5, seed = 1, num_threads = 1, draw_u = TRUE)
 
 # Plot results
 plot.dpc(out)
